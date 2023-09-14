@@ -5,12 +5,12 @@ import Home from "./components/Home"
 import Signup from "./components/Signup"
 import Login from "./components/Login"
 import NotFound from "./components/NotFound"
-
 import {
   BrowserRouter,
   Routes,
   Route
 } from "react-router-dom"
+import AddProducts from './components/AddProducts'
 
 function App() {
   return (
@@ -20,8 +20,9 @@ function App() {
   <Route exact path={"/"} element= {<Home/>}/>
   <Route exact path={"/signup"} element= {<Signup/>}/>
   <Route exact path={"/login"} element= {<Login/>}/>
+  <Route exact path={"/addproducts"} element= {<AddProducts/>}/>
   {/* If Link is Wrong then Not Found Component will render */}
-<Route element={<NotFound/>}/>  
+<Route path={"*"} element={<NotFound/>}/>  
 
   </Routes>
   </BrowserRouter>
